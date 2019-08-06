@@ -1,1 +1,5 @@
 language: java
+deploy:
+  skyp_cleanup: true
+  provider: heroku
+  app: tafexgroup

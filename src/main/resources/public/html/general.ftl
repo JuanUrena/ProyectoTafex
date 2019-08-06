@@ -36,7 +36,7 @@
 							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
 						</div>
 						<ul class="icons">
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<i class="fa fa-facebook" style="font-size:48px;color:red"></i>
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
 							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
