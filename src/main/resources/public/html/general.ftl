@@ -26,7 +26,6 @@
 				</div>
 			</header>
 			<!-- Banner -->
-			<h1>${apartado}</h1>
 			</br>${contenido}
 		</body>
 			<!-- Footer -->
@@ -51,7 +50,7 @@
 	
 	<style type="text/css"> 
         body{ 
-            background-color:#82e0aa;
+            background-color:#ffffff;
             padding: 12em 0 0 0;
         } 
   	h1 { text-align: center}

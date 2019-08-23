@@ -28,10 +28,11 @@ public class Main {
     public static StringWriter main(Request request, Response response) throws ClassNotFoundException, URISyntaxException, TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {
 	String uri = request.uri();
 	
+	
 	StringWriter writer = new StringWriter();
 	Configuration configuration = new Configuration(new Version(2, 3, 0));
     configuration.setClassForTemplateLoading(Main.class, "/");
-	Template resultTemplate = configuration.getTemplate("public/html/main.html");
+	Template resultTemplate = configuration.getTemplate("public/html/main.ftl");
 	
 	Map<String, Object> map = new HashMap<>();
 	
@@ -41,41 +42,37 @@ public class Main {
 	return writer;
     }
     
+    
     public static StringWriter menu(Request request, Response response) throws ClassNotFoundException, URISyntaxException, TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {
     	String uri = request.uri();
     	String parts[] =uri.split("/");
-    	
     	String resource = parts[1].replace("_"," "); 
-    	
+  
+    	String content=menu.getContent(resource);
+
     	StringWriter writer = new StringWriter();
     	Configuration configuration = new Configuration(new Version(2, 3, 0));
         configuration.setClassForTemplateLoading(Main.class, "/");
     	Template resultTemplate = configuration.getTemplate("public/html/general.ftl");
     	
     	Map<String, Object> map = new HashMap<>();
-    	map.put("apartado", resource);
-    	map.put("contenido", "Este es el contenido");
+    	map.put("contenido", content);
 
         resultTemplate.process(map, writer);
     	System.out.println(resource);
     	return writer;
         }
     
-
+    
     public static void main(String[] args) throws ClassNotFoundException {
-        port(getHerokuAssignedPort());
-        staticFileLocation("/public");        
+        port(heroku.getHerokuAssignedPort());
+      
         // spark server
+        staticFileLocation("/public");    
         get("/", (request, response) ->Main.main(request, response));
+        get("/about",(request, response) ->Main.menu(request, response));
         get("/*",(request, response) ->Main.menu(request, response));
 
     }
-
-    static int getHerokuAssignedPort() {
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        if (processBuilder.environment().get("PORT") != null) {
-            return Integer.parseInt(processBuilder.environment().get("PORT"));
-        }
-        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
-    }
+    
 }
