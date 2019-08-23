@@ -31,7 +31,7 @@ public class Main {
 	StringWriter writer = new StringWriter();
 	Configuration configuration = new Configuration(new Version(2, 3, 0));
     configuration.setClassForTemplateLoading(Main.class, "/");
-	Template resultTemplate = configuration.getTemplate("public/html/main.ftl");
+	Template resultTemplate = configuration.getTemplate("public/html/main.html");
 	
 	Map<String, Object> map = new HashMap<>();
 	

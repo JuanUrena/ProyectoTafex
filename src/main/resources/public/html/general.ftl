@@ -28,7 +28,27 @@
 			<!-- Banner -->
 			<h1>${apartado}</h1>
 			</br>${contenido}
-	</body>
+		</body>
+			<!-- Footer -->
+			<footer id="footer">
+					<div class="flex">
+						<div class="copyright">
+							TafexGroup
+						</div>
+						<div style="align:right; margin-right:1em">
+							<a href="https://twitter.com/TafexGroup" target="_blank">
+								<img src="html/assets/twitter.svg" style="width:2em; height:2em; padding-left:1em" />
+							</a>
+							<a href="https://www.facebook.com/grupotafex/" target="_blank">
+								<img src="html/assets/facebook.svg" style="width:2em; height:2em; padding-left:1em" />
+							</a>
+							<a href="https://www.instagram.com/tafexgroup/" target="_blank">
+								<img src="html/assets/instagram.svg" style="width:2em; height:2em; padding-left:1em" />
+							</a>
+						</div>
+				</div>
+			</footer>
+	
 	<style type="text/css"> 
         body{ 
             background-color:#82e0aa;
