@@ -50,7 +50,7 @@
 	
 	<style type="text/css"> 
         body{ 
-            background-color:#ffffff;
+            background-image: url("html/assets/backabout.jpg");
             padding: 12em 0 0 0;
         } 
   	h1 { text-align: center}

@@ -3011,6 +3011,8 @@
 			width: 100%;
 			height: 2em;
 			background-color: #ffffff;
+			border-radius: 5px;
+  			border: 1px solid #708090;
 	}
 
 	#footer .copyright {
@@ -6179,6 +6181,7 @@
 
 	#header {
 		background:  #ffffff;
+		border-bottom: 5px solid #2E8B57;
 		color:  #1e8449;
 		cursor: default;
 		height: 5em;
